@@ -24,13 +24,34 @@
     padding: 20px;
     margin: 1px;
     border: 3px #C4DFE6 solid;
+/*
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 150px;
+*/
+/*    flex: 0 1 auto;*/
+/*    flex: initial;*/
+    
+/*    flex: 1 1 auto;*/
+/*    flex: auto;*/
+    
+/*    flex: 0 0 auto;*/
+/*    flex: none;*/
+    
+/*    flex: 1 0 auto;*/
+    flex: 1 10%;
 }
 
 
+#facebook{
+    font-size: 10px;
+    flex: 30%;
+}
 
-
-
-
+#apple{
+/*    flex-shrink: 0;*/
+    flex: 30%;
+}
 
 #facebook{
     font-size: 10px;
