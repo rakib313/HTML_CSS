@@ -14,27 +14,53 @@
 }
 
 .container{
-    height: 250px;
+    height: 100vh;
     background-color: #07575B;
-/*    turning the container to a grid*/
+    /* turning the container to a grid*/
     display: grid;
-/*    rows height*/
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-/*    columns width*/
-    /* grid-template-columns: 100px 1fr 25% 2fr; */
-    /* grid-template-columns: repeat(4, 20%); */
-    /* grid-template-columns: repeat(4, minmax(400px, 1fr)); */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-areas: 
+            "facebook"
+            "apple"
+            "microsoft"
+            "samsung"
+            "google";
+    grid-template-rows: 50px 100px 1fr 100px 50px;
+    grid-template-columns: 1fr;
 
-/*    gutter*/
+
+    /*    gutter*/
     grid-gap: 5px;
     padding: 7px;
-    /* Set the height of any extra rows outside the template(implicit grid) */
-    grid-auto-rows: 70px;
     
-    /* width of columns */
-    /* grid-auto-columns: 200px; */
-    /* grow columns */
-    /* grid-auto-flow: column; */
+}
+ #apple {
+     grid-area: apple;
+ }
+ #facebook {
+     grid-area: facebook;
+ }
+ #samsung {
+     grid-area: samsung;
+ }
+ #google {
+     grid-area: google;
+ }
+#microsoft {
+    grid-area: microsoft;
+}
+
+@media all and (min-width: 700px) {
+    .container {
+        /*    rows height*/
+        grid-template-rows: 50px 1fr 50px;
+
+        /*   columns width*/
+        grid-template-columns: 20% 1fr 20%;
+    
+        /* grid areas */
+        grid-template-areas: 
+            "apple apple apple"
+            "facebook microsoft samsung"
+            "google google google";
+    }
 }
